@@ -1,0 +1,20 @@
+[
+  {
+    "architecture": "resnet18.a1_in1k",
+    "batch_size": 32,
+    "seconds_per_training_step": 0.04466202500043437,
+    "peak_gpu_bytes": 648872448,
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0"
+  },
+  {
+    "architecture": "deit_tiny_patch16_224.fb_in1k",
+    "batch_size": 32,
+    "seconds_per_training_step": 0.034201439999742435,
+    "peak_gpu_bytes": 725420032,
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0"
+  }
+]

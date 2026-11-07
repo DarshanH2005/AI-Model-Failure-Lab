@@ -1,0 +1,26 @@
+experiment_id: smoke-v1
+profile: smoke
+image_size: 64
+pretrained: false
+architectures: [tiny_cnn]
+seeds: [11]
+budgets: [8]
+train_steps: 12
+repair_steps: 6
+batch_size: 8
+learning_rate: 0.001
+weight_decay: 0.01
+head_steps: 2
+bootstrap_samples: 30
+splits:
+  train: 64
+  matched_val: 32
+  challenge_val: 32
+  calibration_val: 32
+  audit_dev: 32
+  candidates: 32
+  matched_test: 32
+  decorrelated_test: 32
+  inverted_test: 32
+  unfamiliar_test: 32
+

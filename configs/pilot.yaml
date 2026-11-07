@@ -1,0 +1,26 @@
+experiment_id: pilot-resnet-v1
+profile: pilot
+image_size: 224
+pretrained: true
+architectures: [resnet18.a1_in1k]
+seeds: [11]
+budgets: [128]
+train_steps: 60
+repair_steps: 20
+batch_size: 8
+learning_rate: 0.0001
+weight_decay: 0.01
+head_steps: 10
+bootstrap_samples: 100
+splits:
+  train: 256
+  matched_val: 64
+  challenge_val: 64
+  calibration_val: 64
+  audit_dev: 32
+  candidates: 128
+  matched_test: 64
+  decorrelated_test: 64
+  inverted_test: 64
+  unfamiliar_test: 64
+

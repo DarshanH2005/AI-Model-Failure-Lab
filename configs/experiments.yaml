@@ -1,0 +1,45 @@
+experiment_id: core-v4
+profile: final
+image_size: 224
+pretrained: true
+architectures:
+- resnet18.a1_in1k
+- deit_tiny_patch16_224.fb_in1k
+seeds:
+- 11
+- 22
+- 33
+budgets:
+- 128
+- 256
+- 512
+train_steps: 1500
+repair_steps: 300
+batch_size: 32
+learning_rate: 0.0001
+weight_decay: 0.01
+head_steps: 100
+bootstrap_samples: 1000
+splits:
+  train: 6000
+  matched_val: 1000
+  challenge_val: 1000
+  calibration_val: 1000
+  audit_dev: 1000
+  candidates: 4000
+  matched_test: 1024
+  decorrelated_test: 1024
+  inverted_test: 1024
+  unfamiliar_test: 1024
+registry_seed: 100000000
+validation_receipt:
+  objects: 18096
+  canonical_quality_checks: 54288
+  all_valid: true
+  full_validation_reference: core-v1
+  reference_generator_sha256: d49d49613aa9843d5dd735fe037baa402d2c606594bf1983cc9eb6c7e4432dbc
+  rendering_body_unchanged: true
+  registry_identical: true
+  lossless_pixel_and_mask_comparisons: 640
+  new_generator_sha256: 3181cc8d253a3418a8de09a7ec85d44269bc07b86847e6f0d038c46f070fd940
+
